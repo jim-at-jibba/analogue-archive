@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "analogue-archive-20190412141144-authRole",
+            "UnauthRoleArn": "arn:aws:iam::892323868332:role/analogue-archive-20190412141144-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::892323868332:role/analogue-archive-20190412141144-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "analogue-archive-20190412141144-deployment",
+            "UnauthRoleName": "analogue-archive-20190412141144-unauthRole",
+            "StackName": "analogue-archive-20190412141144",
+            "StackId": "arn:aws:cloudformation:eu-west-1:892323868332:stack/analogue-archive-20190412141144/857bce00-5d24-11e9-8c9e-0ade9df0c35e"
+        }
+    }
+}
