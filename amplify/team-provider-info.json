@@ -9,6 +9,11 @@
             "UnauthRoleName": "analogue-archive-20190412141144-unauthRole",
             "StackName": "analogue-archive-20190412141144",
             "StackId": "arn:aws:cloudformation:eu-west-1:892323868332:stack/analogue-archive-20190412141144/857bce00-5d24-11e9-8c9e-0ade9df0c35e"
+        },
+        "categories": {
+            "auth": {
+                "cognitoe6cbcb45": {}
+            }
         }
     }
 }
