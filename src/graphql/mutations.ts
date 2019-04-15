@@ -17,14 +17,15 @@ export const createFilm = `mutation CreateFilm($input: CreateFilmInput!) {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -41,7 +42,6 @@ export const createFilm = `mutation CreateFilm($input: CreateFilmInput!) {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -61,14 +61,15 @@ export const updateFilm = `mutation UpdateFilm($input: UpdateFilmInput!) {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -85,7 +86,6 @@ export const updateFilm = `mutation UpdateFilm($input: UpdateFilmInput!) {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -105,14 +105,15 @@ export const deleteFilm = `mutation DeleteFilm($input: DeleteFilmInput!) {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -129,7 +130,6 @@ export const deleteFilm = `mutation DeleteFilm($input: DeleteFilmInput!) {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -147,10 +147,12 @@ export const createCamera = `mutation CreateCamera($input: CreateCameraInput!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -160,7 +162,6 @@ export const createCamera = `mutation CreateCamera($input: CreateCameraInput!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -179,10 +180,12 @@ export const updateCamera = `mutation UpdateCamera($input: UpdateCameraInput!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -192,7 +195,6 @@ export const updateCamera = `mutation UpdateCamera($input: UpdateCameraInput!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -211,10 +213,12 @@ export const deleteCamera = `mutation DeleteCamera($input: DeleteCameraInput!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -224,7 +228,6 @@ export const deleteCamera = `mutation DeleteCamera($input: DeleteCameraInput!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -245,10 +248,12 @@ export const createFrame = `mutation CreateFrame($input: CreateFrameInput!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -258,7 +263,6 @@ export const createFrame = `mutation CreateFrame($input: CreateFrameInput!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -279,10 +283,12 @@ export const updateFrame = `mutation UpdateFrame($input: UpdateFrameInput!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -292,7 +298,6 @@ export const updateFrame = `mutation UpdateFrame($input: UpdateFrameInput!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -313,10 +318,12 @@ export const deleteFrame = `mutation DeleteFrame($input: DeleteFrameInput!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -326,35 +333,40 @@ export const deleteFrame = `mutation DeleteFrame($input: DeleteFrameInput!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
 `;
 export const createFilmStock = `mutation CreateFilmStock($input: CreateFilmStockInput!) {
   createFilmStock(input: $input) {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;
 export const updateFilmStock = `mutation UpdateFilmStock($input: UpdateFilmStockInput!) {
   updateFilmStock(input: $input) {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;
 export const deleteFilmStock = `mutation DeleteFilmStock($input: DeleteFilmStockInput!) {
   deleteFilmStock(input: $input) {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;

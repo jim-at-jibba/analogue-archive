@@ -17,14 +17,15 @@ export const onCreateFilm = `subscription OnCreateFilm {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -41,7 +42,6 @@ export const onCreateFilm = `subscription OnCreateFilm {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -61,14 +61,15 @@ export const onUpdateFilm = `subscription OnUpdateFilm {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -85,7 +86,6 @@ export const onUpdateFilm = `subscription OnUpdateFilm {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -105,14 +105,15 @@ export const onDeleteFilm = `subscription OnDeleteFilm {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -129,7 +130,6 @@ export const onDeleteFilm = `subscription OnDeleteFilm {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -147,10 +147,12 @@ export const onCreateCamera = `subscription OnCreateCamera {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -160,7 +162,6 @@ export const onCreateCamera = `subscription OnCreateCamera {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -179,10 +180,12 @@ export const onUpdateCamera = `subscription OnUpdateCamera {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -192,7 +195,6 @@ export const onUpdateCamera = `subscription OnUpdateCamera {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -211,10 +213,12 @@ export const onDeleteCamera = `subscription OnDeleteCamera {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -224,7 +228,6 @@ export const onDeleteCamera = `subscription OnDeleteCamera {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -245,10 +248,12 @@ export const onCreateFrame = `subscription OnCreateFrame {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -258,7 +263,6 @@ export const onCreateFrame = `subscription OnCreateFrame {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -279,10 +283,12 @@ export const onUpdateFrame = `subscription OnUpdateFrame {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -292,7 +298,6 @@ export const onUpdateFrame = `subscription OnUpdateFrame {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -313,10 +318,12 @@ export const onDeleteFrame = `subscription OnDeleteFrame {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -326,35 +333,40 @@ export const onDeleteFrame = `subscription OnDeleteFrame {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
 `;
 export const onCreateFilmStock = `subscription OnCreateFilmStock {
   onCreateFilmStock {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;
 export const onUpdateFilmStock = `subscription OnUpdateFilmStock {
   onUpdateFilmStock {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;
 export const onDeleteFilmStock = `subscription OnDeleteFilmStock {
   onDeleteFilmStock {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;

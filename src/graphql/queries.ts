@@ -17,14 +17,15 @@ export const getFilm = `query GetFilm($id: ID!) {
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     film {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     frames {
       items {
@@ -41,7 +42,6 @@ export const getFilm = `query GetFilm($id: ID!) {
     processedWhere
     processedHow
     processedDate
-    name
   }
 }
 `;
@@ -60,10 +60,12 @@ export const listFilms = `query ListFilms(
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -73,7 +75,6 @@ export const listFilms = `query ListFilms(
       processedWhere
       processedHow
       processedDate
-      name
     }
     nextToken
   }
@@ -93,10 +94,12 @@ export const getCamera = `query GetCamera($id: ID!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -106,7 +109,6 @@ export const getCamera = `query GetCamera($id: ID!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -129,7 +131,6 @@ export const listCameras = `query ListCameras(
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     nextToken
@@ -152,10 +153,12 @@ export const getFrame = `query GetFrame($id: ID!) {
         model
       }
       film {
+        id
         filmBrand
         type
         size
         expiryDate
+        quantity
       }
       frames {
         nextToken
@@ -165,7 +168,6 @@ export const getFrame = `query GetFrame($id: ID!) {
       processedWhere
       processedHow
       processedDate
-      name
     }
   }
 }
@@ -190,7 +192,6 @@ export const listFrames = `query ListFrames(
         processedWhere
         processedHow
         processedDate
-        name
       }
     }
     nextToken
@@ -199,10 +200,12 @@ export const listFrames = `query ListFrames(
 `;
 export const getFilmStock = `query GetFilmStock($id: ID!) {
   getFilmStock(id: $id) {
+    id
     filmBrand
     type
     size
     expiryDate
+    quantity
   }
 }
 `;
@@ -213,10 +216,12 @@ export const listFilmStocks = `query ListFilmStocks(
 ) {
   listFilmStocks(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
+      id
       filmBrand
       type
       size
       expiryDate
+      quantity
     }
     nextToken
   }
