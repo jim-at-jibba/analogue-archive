@@ -9,15 +9,6 @@ export const onCreateFilm = `subscription OnCreateFilm {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -53,15 +44,6 @@ export const onUpdateFilm = `subscription OnUpdateFilm {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -97,15 +79,6 @@ export const onDeleteFilm = `subscription OnDeleteFilm {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -138,31 +111,6 @@ export const onCreateCamera = `subscription OnCreateCamera {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;
@@ -171,31 +119,6 @@ export const onUpdateCamera = `subscription OnUpdateCamera {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;
@@ -204,31 +127,6 @@ export const onDeleteCamera = `subscription OnDeleteCamera {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;

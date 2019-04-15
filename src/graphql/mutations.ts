@@ -9,15 +9,6 @@ export const createFilm = `mutation CreateFilm($input: CreateFilmInput!) {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -53,15 +44,6 @@ export const updateFilm = `mutation UpdateFilm($input: UpdateFilmInput!) {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -97,15 +79,6 @@ export const deleteFilm = `mutation DeleteFilm($input: DeleteFilmInput!) {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -138,31 +111,6 @@ export const createCamera = `mutation CreateCamera($input: CreateCameraInput!) {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;
@@ -171,31 +119,6 @@ export const updateCamera = `mutation UpdateCamera($input: UpdateCameraInput!) {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;
@@ -204,31 +127,6 @@ export const deleteCamera = `mutation DeleteCamera($input: DeleteCameraInput!) {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;

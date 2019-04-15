@@ -1,0 +1,43 @@
+enum FilmSize {
+  THIRTYFIVE
+  ONETWENTY
+  FOURBYFIVE
+  EIGHTBYFIVE
+}
+
+type Film @model {
+  id: ID!
+  filmNumber: Int
+  camera: Camera
+  film: FilmStock
+  frames: [Frame]! @connection(name: "FilmFrames")
+  inCameraDate: AWSDateTime!
+  outCameraDate: AWSDateTime
+  processedWhere: String
+  processedHow: String
+  processedDate: AWSDateTime
+}
+
+type Camera @model {
+  id: ID!
+  brand: String!
+  model: String!
+}
+
+type Frame @model {
+  id: ID!
+  captureDate: AWSDateTime!
+  aperture: String
+  shutterSpeed: String
+  description: String
+  film: Film @connection(name: "FilmFrames")
+}
+
+type FilmStock @model {
+  id: ID!
+  filmBrand: String!
+  type: String
+  size: FilmSize
+  expiryDate: AWSDateTime!
+  quantity: Int
+}

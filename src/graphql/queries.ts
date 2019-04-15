@@ -9,15 +9,6 @@ export const getFilm = `query GetFilm($id: ID!) {
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     film {
       id
@@ -85,31 +76,6 @@ export const getCamera = `query GetCamera($id: ID!) {
     id
     brand
     model
-    film {
-      id
-      filmNumber
-      camera {
-        id
-        brand
-        model
-      }
-      film {
-        id
-        filmBrand
-        type
-        size
-        expiryDate
-        quantity
-      }
-      frames {
-        nextToken
-      }
-      inCameraDate
-      outCameraDate
-      processedWhere
-      processedHow
-      processedDate
-    }
   }
 }
 `;
@@ -123,15 +89,6 @@ export const listCameras = `query ListCameras(
       id
       brand
       model
-      film {
-        id
-        filmNumber
-        inCameraDate
-        outCameraDate
-        processedWhere
-        processedHow
-        processedDate
-      }
     }
     nextToken
   }

@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "aa-ts-20190415135103-authRole",
+            "UnauthRoleArn": "arn:aws:iam::892323868332:role/aa-ts-20190415135103-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::892323868332:role/aa-ts-20190415135103-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "aa-ts-20190415135103-deployment",
+            "UnauthRoleName": "aa-ts-20190415135103-unauthRole",
+            "StackName": "aa-ts-20190415135103",
+            "StackId": "arn:aws:cloudformation:eu-west-1:892323868332:stack/aa-ts-20190415135103/20d93f90-5f7d-11e9-8bb6-06805a56c612"
+        },
+        "categories": {
+            "auth": {
+                "cognitoea034091": {}
+            }
+        }
+    }
+}
