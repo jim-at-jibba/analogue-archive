@@ -3,7 +3,7 @@ import { Router, Switch } from 'react-router-dom';
 import * as H from 'history';
 import Amplify, { Auth } from 'aws-amplify';
 import awsmobile from '../../aws-exports';
-import styled from '../../lib/styled-componennts';
+import styled from '../../lib/styled-components';
 import { Routes } from './Routes';
 import Route from './Route';
 import { withAuthenticator } from 'aws-amplify-react';
