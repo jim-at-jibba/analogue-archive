@@ -1,4 +1,4 @@
-import styled from '@Utils/styled-components';
+import styled from '../../lib/styled-components';
 import { FieldArray } from 'formik';
 import Grid from 'hedron';
 import * as React from 'react';

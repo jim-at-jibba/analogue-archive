@@ -1,15 +1,15 @@
 // @ts-ignore
-import * as React from "react";
-import styled from "@Utils/styled-components";
-import Grid from "hedron";
-import FieldError from "./FieldError";
-import Label from "./Label";
-import { IFormRadio } from ".";
-const RadioStyled = styled.input.attrs({ type: "radio" })`
+import * as React from 'react';
+import styled from '../../lib/styled-components';
+import Grid from 'hedron';
+import FieldError from './FieldError';
+import Label from './Label';
+import { IFormRadio } from '.';
+const RadioStyled = styled.input.attrs({ type: 'radio' })`
   width: 20px;
   height: 20px;
   :before {
-    content: "";
+    content: '';
     background: #fff;
     display: block;
     width: 20px;
@@ -44,7 +44,12 @@ const Radio: React.SFC<IFormRadio> = props => {
       </Grid.Box>
       <Grid.Box>
         {props.options.map((opt, index) => (
-          <Grid.Bounds key={`${props.name}-${index}`} valign="top" direction="horizontal" style={{ position: "relative" }}>
+          <Grid.Bounds
+            key={`${props.name}-${index}`}
+            valign="top"
+            direction="horizontal"
+            style={{ position: 'relative' }}
+          >
             <Grid.Box>
               <RadioLabel for={`${props.name}-${index}`} label={opt.text}>
                 <RadioStyled

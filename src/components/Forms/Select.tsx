@@ -1,12 +1,12 @@
-import * as React from "react";
-import styled from "@Utils/styled-components";
-import Grid from "hedron";
-import FieldError from "./FieldError";
-import Label from "./Label";
-import { Field as FormikField } from "formik";
-import { IFormSelect } from ".";
+import * as React from 'react';
+import styled from '../../lib/styled-components';
+import Grid from 'hedron';
+import FieldError from './FieldError';
+import Label from './Label';
+import { Field as FormikField } from 'formik';
+import { IFormSelect } from '.';
 const SelectStyled = styled(FormikField).attrs({
-  component: "select"
+  component: 'select',
 })`
   outline: none;
   border: none;

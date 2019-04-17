@@ -1,8 +1,7 @@
-import * as React from "react";
-import styled from "@Utils/styled-components";
-import { Text } from "@Components/Text";
+import * as React from 'react';
+import styled from '../../lib/styled-components';
 
-const LabelWrapper = styled("label")`
+const LabelWrapper = styled('label')`
   color: ${({ theme }) => theme.fonts.colors.primary};
   font-size: ${({ theme }) => theme.fonts.sizes.h5};
 `;
@@ -14,7 +13,7 @@ const Label: React.SFC<{
 }> = props => (
   <LabelWrapper htmlFor={props.for} className={props.className}>
     {props.children}
-    <Text>{props.label}</Text>
+    <p>{props.label}</p>
   </LabelWrapper>
 );
 

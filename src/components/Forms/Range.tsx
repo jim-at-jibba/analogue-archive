@@ -1,11 +1,11 @@
-import * as React from "react";
-import styled, { css } from "@Utils/styled-components";
-import Grid from "hedron";
-import FieldError from "./FieldError";
-import Label from "./Label";
-import { Text } from "@Components/Text";
-import { IFormRange } from ".";
-import { Field as FormikField } from "formik";
+import * as React from 'react';
+import styled, { css } from '../../lib/styled-components';
+import Grid from 'hedron';
+import FieldError from './FieldError';
+import Label from './Label';
+import { Text } from '../Text';
+import { IFormRange } from '.';
+import { Field as FormikField } from 'formik';
 const thumbStyles = css`
   height: 25px;
   width: 25px;
@@ -23,7 +23,7 @@ const trackStyles = css`
   background: ${({ theme }) => theme.colors.accentDark};
 `;
 
-const RangeStyled = styled(FormikField).attrs({ type: "range" })`
+const RangeStyled = styled(FormikField).attrs({ type: 'range' })`
   margin-bottom: ${({ theme }) => theme.spacing.padding.medium};
   width: 100%;
   box-sizing: border-box;
@@ -90,10 +90,10 @@ const Range: React.SFC<IFormRange> = props => {
       <Grid.Box>
         <Grid.Bounds direction="horizontal">
           <Grid.Box shiftLeft>
-            <Text weight="bold">Disagree</Text>
+            <p>Disagree</p>
           </Grid.Box>
           <Grid.Box shiftRight>
-            <Text weight="bold">Agree</Text>
+            <p>Agree</p>
           </Grid.Box>
         </Grid.Bounds>
       </Grid.Box>

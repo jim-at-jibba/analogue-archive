@@ -1,12 +1,12 @@
-import * as React from "react";
-import styled from "@Utils/styled-components";
-import Grid from "hedron";
-import FieldError from "./FieldError";
-import Label from "./Label";
-import { Field as FormikField } from "formik";
-import { IFormTextArea } from ".";
+import * as React from 'react';
+import styled from '../../lib/styled-components';
+import Grid from 'hedron';
+import FieldError from './FieldError';
+import Label from './Label';
+import { Field as FormikField } from 'formik';
+import { IFormTextArea } from '.';
 
-const TextAreaStyled = styled(FormikField).attrs({ component: "textarea" })`
+const TextAreaStyled = styled(FormikField).attrs({ component: 'textarea' })`
   background: ${({ theme }) => theme.colors.white};
   outline: none;
   border: none;
@@ -26,7 +26,11 @@ const TextArea: React.SFC<IFormTextArea> = props => {
         <Label for={props.name} label={props.label} />
       </Grid.Box>
       <Grid.Box>
-        <TextAreaStyled id={props.name} name={props.name} onChange={props.handleChange} />
+        <TextAreaStyled
+          id={props.name}
+          name={props.name}
+          onChange={props.handleChange}
+        />
       </Grid.Box>
       {props.error && (
         <Grid.Box>

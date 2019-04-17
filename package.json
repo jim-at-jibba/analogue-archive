@@ -12,17 +12,19 @@
     "aws-appsync": "^1.7.2",
     "aws-appsync-react": "^1.2.7",
     "formik": "^1.5.2",
+    "hedron": "git://github.com/georgeevans1995/hedron.git",
     "history": "^4.9.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.4",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
+    "react-truncate-markup": "^4.0.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.86.0",
     "styled-components": "^4.2.0",
     "typescript": "3.4.3",
-    "hedron": "git://github.com/georgeevans1995/hedron.git"
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,6 +45,7 @@
     "@types/history": "^4.7.2",
     "@types/react-router-dom": "^4.3.2",
     "@types/styled-components": "^4.1.14",
+    "@types/yup": "^0.26.12",
     "prettier": "^1.16.4",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",

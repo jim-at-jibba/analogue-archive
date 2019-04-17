@@ -3,13 +3,14 @@ import { Router, Switch } from 'react-router-dom';
 import * as H from 'history';
 import Amplify, { Auth } from 'aws-amplify';
 import awsmobile from '../../aws-exports';
-import styled from '../../lib/styled-components';
+import styled, { ThemeProvider } from '../../lib/styled-components';
 import { Routes } from './Routes';
 import Route from './Route';
 import { withAuthenticator } from 'aws-amplify-react';
 import { Rehydrated } from 'aws-appsync-react';
 import AWSAppSyncClient from 'aws-appsync';
 import { ApolloProvider } from 'react-apollo';
+import { theme } from '../../lib/theme';
 
 Amplify.configure(awsmobile);
 
@@ -44,7 +45,7 @@ const PageContainer = styled.div`
 const AppRouter: React.SFC<Props> = ({ history }) => {
   return (
     <Router history={history}>
-      <>
+      <ThemeProvider theme={theme}>
         <ApolloProvider client={client}>
           <Rehydrated>
             <PageContainer>
@@ -61,7 +62,7 @@ const AppRouter: React.SFC<Props> = ({ history }) => {
             </PageContainer>
           </Rehydrated>
         </ApolloProvider>
-      </>
+      </ThemeProvider>
     </Router>
   );
 };

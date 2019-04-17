@@ -1,14 +1,13 @@
-import * as React from "react";
-import Input from "./Input";
-import Select from "./Select";
-import TextArea from "./TextArea";
-import Checkbox from "./Checkbox";
-import Radio from "./Radio";
-import Range from "./Range";
-import { IFormField } from ".";
-import Grid from "hedron";
-import styled from "@Utils/styled-components";
-// import Text from "@Components/Text";
+import * as React from 'react';
+import Input from './Input';
+import Select from './Select';
+import TextArea from './TextArea';
+import Checkbox from './Checkbox';
+import Radio from './Radio';
+import Range from './Range';
+import { IFormField } from '.';
+import Grid from 'hedron';
+import styled from '../../lib/styled-components';
 
 const Field: React.SFC<{
   value: string[] | string;
@@ -20,7 +19,7 @@ const Field: React.SFC<{
 }> = ({ field, handleChange, handleBlur, setFieldValue, value, hidden }) => {
   let Field;
   switch (field.type) {
-    case "input":
+    case 'input':
       Field = (
         <Input
           validation={field.validation}
@@ -35,7 +34,7 @@ const Field: React.SFC<{
         />
       );
       break;
-    case "select":
+    case 'select':
       Field = (
         <Select
           handleBlur={handleBlur}
@@ -48,10 +47,18 @@ const Field: React.SFC<{
         />
       );
       break;
-    case "textarea":
-      Field = <TextArea handleBlur={handleBlur} handleChange={handleChange} name={field.name} label={field.label} error={field.error} />;
+    case 'textarea':
+      Field = (
+        <TextArea
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+          name={field.name}
+          label={field.label}
+          error={field.error}
+        />
+      );
       break;
-    case "checkbox":
+    case 'checkbox':
       Field = (
         <Checkbox
           handleBlur={handleBlur}
@@ -66,7 +73,7 @@ const Field: React.SFC<{
       );
       break;
 
-    case "radio":
+    case 'radio':
       Field = (
         <Radio
           handleBlur={handleBlur}
@@ -78,7 +85,7 @@ const Field: React.SFC<{
         />
       );
       break;
-    case "range":
+    case 'range':
       Field = (
         <Range
           range={field.range ? field.range : [0, 10]}
@@ -98,7 +105,7 @@ const Field: React.SFC<{
     <FieldWrapper
       direction="vertical"
       style={{
-        display: hidden ? "none" : "block"
+        display: hidden ? 'none' : 'block',
       }}
     >
       {Field}
